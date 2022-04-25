@@ -13,9 +13,7 @@ const Phrase: NextPage = () => {
 
   return (
     <>
-      <h1 className={"title"}>You're creating a new wallet</h1>
-
-      <p>Now we're going to generate a keyphrase that you need to keep secret</p>
+      <h1 className={`title`}>Creating a new wallet</h1>
 
       {!loading && (
         <Link href={`/phrase`} passHref>
