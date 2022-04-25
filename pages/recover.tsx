@@ -7,7 +7,7 @@ import { LoadingOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 
 // Import Bip39 to convert a phrase to a seed:
-
+import * as Bip39 from "bip39";
 // Import the Keypair class from Solana's web3.js library:
 
 const Recover: NextPage = () => {
