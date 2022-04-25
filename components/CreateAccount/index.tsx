@@ -17,19 +17,15 @@ const CreateAccount = (): ReactElement => {
 
   return (
     <Card>
-      <BankOutlined
-        style={{ fontSize: "3rem", margin: "2rem 0", display: "block" }}
-      />
-      <h2>New to MyWallet?</h2>
-      <p>
-        Create a new wallet to send, receive and swap Solana digital assets.
-      </p>
+      <h2 style={{ textAlign: "center" }}>
+        Create
+      </h2>
 
       <div className={"buttons"}>
         {!loading && (
           <Link href={`/generate`} passHref>
-            <Button type="primary" onClick={handleGenerate}>
-              Create New Wallet
+            <Button style={{ borderColor: "#fff" }} onClick={handleGenerate}>
+              New Wallet
             </Button>
           </Link>
         )}

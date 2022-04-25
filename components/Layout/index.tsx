@@ -57,7 +57,7 @@ const Layout = ({ children }: { children: JSX.Element }): ReactElement => {
     <Menu>
       <Menu.Item key="/wallet" icon={<CreditCardOutlined />}>
         <Link href="/wallet" passHref>
-          Wallet
+          Sphere
         </Link>
       </Menu.Item>
       <Menu.Item key="logout" icon={<LogoutOutlined />} onClick={handleLogout}>
@@ -71,7 +71,12 @@ const Layout = ({ children }: { children: JSX.Element }): ReactElement => {
       <main className={styles.main}>
         <header className={styles.header}>
           <Link href={`/`} passHref>
-            <div className={`${styles.top} ${styles.logo}`}>MyWallet</div>
+            <div className={`${styles.top} ${styles.logo}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <circle cx="25" cy="25" r="25" fill="#FF9900"/>
+              </svg>
+              <span style={{ whiteSpace: 'nowrap', marginLeft: '10px' }}>The Sphere</span>
+            </div>
           </Link>
 
           <Menu
@@ -119,9 +124,9 @@ const Layout = ({ children }: { children: JSX.Element }): ReactElement => {
 
         <footer className={styles.footerHome}>
           <p>
-            MyWallet tutorial created by{" "}
-            <a className={styles.footerLink} href="https://learn.figment.io/">
-              Figment Learn
+            Copyright 2022 {" "}
+            <a className={styles.footerLink} href="https://beta.thesphere.online/">
+              The Sphere
             </a>
           </p>
         </footer>

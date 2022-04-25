@@ -5,9 +5,10 @@ import PhraseBox from "../components/PhraseBox";
 import { useGlobalState } from "../context";
 import { LoadingOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
+import { Keypair } from "@solana/web3.js"
 
 // Import Bip39 to generate a phrase and convert it to a seed:
-
+import * as Bip39 from "bip39";
 // Import the Keypair class from Solana's web3.js library:
 
 const Phrase: NextPage = () => {
@@ -22,20 +23,20 @@ const Phrase: NextPage = () => {
     // (a) review the import guidance on lines 9 and 11
     // (b) generate a mnemonic phrase by importing Bip39 and then implementing the appropriate method on the imported Bip39 instance
     // Documentation Reference: https://github.com/bitcoinjs/bip39
-    const generatedMnemonic = "";
+    const generatedMnemonic = Bip39.generateMnemonic();
 
     // This line saves the mnemonic phrase to context state so we can display it for the wallet user to copy
     setMnemonic(generatedMnemonic);
 
     // (c) convert the mnemonic to seed bytes and make sure it's 32-bytes (Hint: console log the seed to see how many bytes you have vs how many you need)
     // Documentation Reference: https://github.com/bitcoinjs/bip39
-    const seed = new Uint8Array();
+    const seed = Bip39.mnemonicToSeedSync(generatedMnemonic).slice(0,32);
 
     // (d) use the seed to generate a new account (i.e. a new keypair)
     // Documentation Reference:
     //   https://solana-labs.github.io/solana-web3.js/classes/Keypair.html
     //   https://solana-labs.github.io/solana-web3.js/classes/Keypair.html#fromSeed
-    const newAccount = null;
+    const newAccount = Keypair.fromSeed(seed);
 
     // This line sets the account to context state so it can be used by the app
     setAccount(newAccount);
@@ -59,10 +60,10 @@ const Phrase: NextPage = () => {
 
   return (
     <>
-      <h1 className={"title"}>Secret Recovery Phrase</h1>
+      <h1 className={"title"}>Account created!</h1>
 
       <p>
-        This recovery phrase is generated with your private keys and can be used
+        Keep track of your recovery phrase, this is generated with your private keys and can be used
         to recover your account.
       </p>
 

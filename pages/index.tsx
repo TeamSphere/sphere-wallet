@@ -11,19 +11,19 @@ const Home: NextPage = () => {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta charSet="utf-8" />
-        <title>Wallet Tutorial</title>
-        <meta name="description" content="Web3 tutorial for Solana crypto wallet." />
+        <title>The Sphere | A decentralised web token</title>
+        <meta name="description" content="The Sphere BETA" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeTitle>
-        A simple, non-custodial crypto wallet for managing{" "}
-        <a href="https://solana.com/">Solana</a> digital assets.
+        Welcome to the {" "}
+        <a href="https://www.thesphere.online">Sphere</a>
       </HomeTitle>
 
       <HomeGrid>
         <CreateAccount />
-        <RestoreAccount />
       </HomeGrid>
+      <RestoreAccount />
     </>
   );
 };
@@ -50,10 +50,10 @@ const HomeTitle = styled.h1`
 
 const HomeGrid = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  flex-wrap: no-wrap;
+  max-width: 1200px;
   width: 100%;
 `;
 

@@ -13,14 +13,14 @@ const Phrase: NextPage = () => {
 
   return (
     <>
-      <h1 className={"title"}>Create New Wallet</h1>
+      <h1 className={"title"}>You're creating a new wallet</h1>
 
-      <p>Generate a key phrase to set up your Solana wallet.</p>
+      <p>Now we're going to generate a keyphrase that you need to keep secret</p>
 
       {!loading && (
         <Link href={`/phrase`} passHref>
           <Button type="default" onClick={handleLoading}>
-            Generate
+            Create
           </Button>
         </Link>
       )}

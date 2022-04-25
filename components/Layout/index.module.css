@@ -22,18 +22,22 @@
 
 .top {
   margin: auto 0;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   color: black;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
+  font-weight: normal;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .logo:hover {
   cursor: pointer;
-  color: #0070f3;
+  color: #FF9900;
 }
 
 .nav {
@@ -49,7 +53,7 @@ a.back {
 a.back:hover,
 a.back:focus,
 a.back:active {
-  color: #0070f3;
+  color: #FF9900;
 }
 
 .footerHome {
@@ -57,11 +61,11 @@ a.back:active {
 }
 
 .footerLink {
-  color: #999;
+  color: #FF9900;
 }
 
 .footerLink:hover,
 .footerLink:focus,
 .footerLink:active {
-  color: #0070f3;
+  color: #FF9900;
 }

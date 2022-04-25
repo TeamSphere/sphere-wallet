@@ -2,23 +2,24 @@ import styled from "styled-components";
 import { Button, Input } from "antd";
 
 export const Card = styled.div`
-  margin: 1rem 1.5rem;
-  padding: 1.5rem;
-  max-width: 20rem;
+  margin: 1rem 1rem;
+  padding: 1rem;
+  max-width: 15rem;
   text-align: left;
   color: inherit;
   background-color: #fafafa;
   text-decoration: none;
-  border: 1px solid #efefef;
-  border-radius: 5px;
+  border: 0px solid #efefef;
+  border-radius: 4px;
   transition: color 0.15s ease, border-color 0.15s ease,
     background-color 0.15s ease;
 
   &:hover,
   &:focus,
   &:active {
-    border-color: #ddd;
-    background-color: #f7f7f7;
+    border-color: #black;
+    background-color: #FF9900;
+    color: black;
   }
 
   & > h2 {
@@ -37,6 +38,7 @@ export const Card = styled.div`
     align-items: center;
     justify-content: center;
     margin: 1.5rem auto 0.5rem;
+    color: black;
   }
 
   .disabledButton {
@@ -49,7 +51,7 @@ export const Dashboard = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 30rem;
+  min-width: 100vw;
   margin-top: 2rem;
 `;
 
@@ -63,8 +65,8 @@ export const Question = styled.p`
   position: absolute !important;
   top: 66%;
   left: 108%;
-  border: 0.5px solid #ccc;
-  color: #a5a5a5;
+  border: 0.5px solid #FF9900;
+  color: #FF9900;
   border-radius: 50%;
   text-align: center;
   width: 1.1rem;
@@ -77,10 +79,10 @@ export const Box = styled.div`
   max-width: 800px;
   width: 80%;
   padding-top: 0.7rem;
-  color: #333;
+  color: #white;
   font-weight: 600;
-  border: 1px solid #ddd;
-  background-color: #fbfbfb;
+  border: 1px solid #FF9900;
+  background-color: #FF9900;
   border-radius: 4px;
   transition: color 0.15s ease, border-color 0.15s ease,
     background-color 0.15s ease;
@@ -99,57 +101,33 @@ export const CheckImage = styled.img`
 `;
 
 export const CheckFrom = styled.p`
-  position: absolute;
-  top: 11%;
-  left: 3.6%;
 `;
 
 export const Processed = styled.a`
-  position: absolute;
-  top: 20%;
-  left: 3.6%;
   font-style: italic;
   color: #dc1fff;
 `;
 
 export const CheckDate = styled.p`
-  position: absolute;
-  top: 19%;
-  left: 68%;
 `;
 
 export const RecipientInput = styled(Input)`
-  position: absolute;
-  top: 35%;
-  left: 17%;
   height: 9%;
   width: 50%;
 `;
 
 export const AmountInput = styled(Input)`
-  position: absolute;
-  top: 35%;
-  left: 76%;
   height: 9%;
   width: 15%;
 `;
 
 export const SignatureInput = styled(Button)`
-  position: absolute;
-  top: 69%;
-  left: 59%;
   height: 9%;
   width: 32.5%;
 `;
 
 export const AmountText = styled.p`
-  position: absolute;
-  top: 52%;
-  left: 5%;
 `;
 
 export const RatioText = styled.p`
-  position: absolute;
-  top: 71%;
-  left: 11%;
 `;
