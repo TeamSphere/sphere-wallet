@@ -13,7 +13,7 @@ const Phrase: NextPage = () => {
 
   return (
     <>
-      <h1 className={`title`}>Creating a new wallet</h1>
+      <h1 className={'title'}>Creating a new wallet</h1>
 
       {!loading && (
         <Link href={`/phrase`} passHref>
