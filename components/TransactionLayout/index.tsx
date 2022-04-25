@@ -2,7 +2,7 @@
 import React, { useState, ReactElement } from "react";
 import { message } from "antd";
 import { useGlobalState } from "../../context";
-import { LAMPORTS_PER_SOL, Connection, Transaction, SystemProgram, clusterApiUrl } from "@solana/web3.js";
+import { LAMPORTS_PER_SOL, Connection, Transaction, SystemProgram, PublicKey, clusterApiUrl } from "@solana/web3.js";
 const converter = require("number-to-words");
 import { LoadingOutlined } from "@ant-design/icons";
 import { refreshBalance } from "../../utils";
